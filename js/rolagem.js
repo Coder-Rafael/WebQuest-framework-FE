@@ -42,6 +42,7 @@ function fecharQuestionario(){
   const answersElement = document.getElementById("answers");
   const resultElement = document.getElementById("result");
   const btnFinish = document.getElementById("finish");
+  const btnInit = document.getElementById("button_avaliacao");
 
         let currentQuestionIndex = 0;
         let correctAnswers = 0;
@@ -80,6 +81,7 @@ function fecharQuestionario(){
             questionContainer.style.display = "none";
             resultContainer.style.display = "flex";
             resultElement.textContent = `Você acertou ${correctAnswers} de ${questions.length} questões.`;
+            btnInit.style.display = "none";
         }
 
         document.getElementById("init").onclick = iniciarQuestionario;
